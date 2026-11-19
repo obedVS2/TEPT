@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: clamp(12px, 3vw, 32px);
+    background-image: url(fondo5.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+h1 {
+    color: #001A36;
+    border: 4px solid #F7DF00;
+    background-color: #F7DF00;
+    margin: 0 0 20px;
+    padding: 12px;
+}
+
+h2 {
+    text-align: center;
+    font-family: monospace;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.Titulo {
+    font-family: monospace;
+    font-size: clamp(2rem, 7vw, 5rem);
+    line-height: 1.1;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.texto_c {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.caja1,
+.caja2 {
+    height: 100%;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.caja1 {
+    background-color: #2699FB;
+}
+
+.caja2 {
+    background-color: #692A7F;
+    color: #FFFFFF;
+}
+
+.cajas {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    gap: 20px;
+}
+
+.cajas li {
+    flex: 1;
+    min-width: 0;
+}
+
+.lista li {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.artes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    gap: 16px;
+}
+
+.artes li {
+    min-width: 0;
+    text-align: center;
+}
+
+.botones {
+    min-height: 160px;
+    height: 100%;
+    padding: 16px;
+    border-radius: 20px;
+    background-color: #001A36;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: clamp(1.25rem, 2.5vw, 2rem);
+    overflow-wrap: anywhere;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.artes a:focus-visible .botones,
+.artes a:hover .botones {
+    background-color: #173F68;
+    transform: translateY(-2px);
+}
+
+.titulo_b {
+    font-size: clamp(1.5rem, 4vw, 3.125rem);
+    margin: 24px 0 16px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #001A36;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 760px) {
+    .artes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cajas {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 420px) {
+    .artes {
+        grid-template-columns: 1fr;
+    }
+
+    .botones {
+        min-height: 88px;
+    }
+}
